@@ -32,6 +32,17 @@ class EditContact extends Component {
     e.preventDefault();
     const { id } = this.props.match.params;
     const { name, email, phone } = this.state;
+
+    if (name === '') {
+      return this.setState({ errors: { name: 'Name is required' } });
+    }
+    if (email === '') {
+      return this.setState({ errors: { email: 'Email is required' } });
+    }
+    if (phone === '') {
+      return this.setState({ errors: { phone: 'Phone is required' } });
+    }
+
     const updateContact = {
       name,
       email,

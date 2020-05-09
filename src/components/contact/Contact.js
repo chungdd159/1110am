@@ -23,7 +23,7 @@ class Contact extends Component {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
-              <h3>
+              <h4>
                 {name}
                 <i
                   onClick={() =>
@@ -49,7 +49,7 @@ class Contact extends Component {
                     }}
                   ></i>
                 </Link>
-              </h3>
+              </h4>
               {showContactInfo ? (
                 <ul className="list-group">
                   <li className="list-group-item">Email: {email}</li>
